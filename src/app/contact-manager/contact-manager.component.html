@@ -1,0 +1,88 @@
+<!-- login details:{{loginDate|date:'short'}} -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3">CONTACT MANAGEMENT APPLICATION</h1>
+            <P style="text-align: justify;"> A contact management system lets you sync all of your contacts to one
+                record, stay on top of your networks, and communicate in real-time. Additionally, reps can view
+                conversation histories and filter their network into contact lists by title, industry, relationship to
+                your business, and a range of other attributes and custom fields. When it comes to the business of
+                selling, it’s not so much what you know, as who you know. Having a 360-degree view of all your sales
+                leads and contacts is the lifeblood for your sales team, which is why CRM contact management software is
+                so key for pipeline management and the entire sales process.
+
+            </P>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col d-flex justify-content-between">
+            <div>
+                <!-- search -->
+                <input (keyup)="search($event)" type="text" placeholder="Search Contact" class="form-control">
+            </div>
+            <!-- add conttact button -->
+            <button class="btn btn-outline-dark" routerLink="addcontact">Add Contact</button>
+        </div>
+    </div>
+    <!-- //String Interpolation -->
+    {{heading}}
+    <!-- {{allContacts|json}} -->
+    <div class="row">
+        <div class="col-6" *ngFor="let contact of allContacts |filter:searchkey:'name'">
+            <div class="card my-3 ">
+                <div class="row">
+                    <div class="col-6 ">
+
+                        <!-- image -->
+                        <img width="250px" height="200px" [src]="contact.photourl">
+                    </div>
+                    <div class="col-6">
+                        <!-- content -->
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Full Name</div>
+                                    {{contact.name}}
+                                </div>
+                                <!-- View -->
+                                <span class="badge bg-dark rounded-pill p-2">
+
+                                    <a routerLink="/contactManager/viewcontact/{{contact.id}}">
+                                        <i class="fa-solid fa-eye fa-beat-fade text-light"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Contact Number</div>
+                                    {{contact.contact}}
+                                </div>
+                                <!-- edit -->
+                                <span class="badge bg-dark rounded-pill p-2">
+                                    <a routerLink="/contactManager/editcontact/:{{contact.id}}">
+                                        <i class="fa-solid fa-pen fa-beat-fade text-light"></i>
+
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">E-mail</div>
+                                    {{contact.email}}
+                                </div>
+                                <!-- Delete -->
+                                <span (click)="deleteContact(contact.id)" class="badge bg-dark rounded-pill p-2">
+                                    <a routerLink="">
+                                        <i class="fa-solid fa-trash fa-beat-fade text-light"> </i>
+                                    </a>
+                                </span>
+                            </li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,68 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Renuka",
+      "email": "renu12@gmail.com",
+      "contact": "9744785661",
+      "photourl": "https://i.pinimg.com/736x/87/ff/14/87ff14780b70043d7a2e2d21fcdb26c1.jpg",
+      "company": "ABC Company",
+      "title": "HR",
+      "GroupId": "1"
+    },
+    {
+      "id": "3",
+      "name": "Kiran",
+      "email": "kr12@gmail.com",
+      "contact": "9734785661",
+      "photourl": "https://th.bing.com/th/id/OIP.ekumCdxegA-tC7ZXNOwUcgAAAA?pid=ImgDet&rs=1",
+      "company": "JLN Company",
+      "title": "Manager",
+      "GroupId": "3"
+    },
+    {
+      "id": "4",
+      "name": "Arun",
+      "email": "ak45@gmail.com",
+      "contact": "8744785661",
+      "photourl": "https://www.sanjivaniayurved.com/public/images/temp%20images/men.png",
+      "company": "CDN Company",
+      "title": "Associate",
+      "GroupId": "1"
+    },
+    {
+      "GroupId": "2",
+      "photourl": "https://th.bing.com/th/id/OIP.61nDcM-IijeA2eLWhvid-AAAAA?pid=ImgDet&rs=1",
+      "id": "89",
+      "name": "Alice",
+      "email": "alice13@gmail.com",
+      "contact": "9788764063",
+      "company": "UST",
+      "title": "Software Engineer"
+    },
+    {
+      "GroupId": "2",
+      "id": "78",
+      "name": "Rohan",
+      "photourl": "https://cdn-icons-png.flaticon.com/512/4537/4537032.png",
+      "email": "r@gmail.com",
+      "contact": "9734785661",
+      "company": "UST",
+      "title": "Assosciate"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "company"
+    },
+    {
+      "id": "2",
+      "name": "Family"
+    },
+    {
+      "id": "3",
+      "name": "Friends"
+    }
+  ]
+}

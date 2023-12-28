@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Instrument+Serif:ital@0;1&family=Lobster&family=Lobster+Two&family=Oswald:wght@400;500&family=Shrikhand&display=swap');
+h1{
+    font-family: 'Abril Fatface', cursive;
+}
+
+h3{
+    font-family: 'Oswald', sans-serif;
+}
+
+p{
+    font-family: 'Instrument Serif', serif;
+}
